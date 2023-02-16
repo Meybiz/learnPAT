@@ -12,6 +12,10 @@
   --color-text-small: #4F596A;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -429,4 +433,196 @@ header {
 
 .instructor-image img {
   margin-top: 15px;
+}
+
+.say {
+  width: 100%;
+  height: 806px;
+  background: var(--purple-gradient);
+}
+
+.say-head {
+  width: 39%;
+  margin: 0 auto;
+  padding: 120px 0px;
+}
+
+.say-head h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-block);
+  line-height: 56px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.say-head p {
+  font-weight: 400;
+  font-size: var(--font-middle);
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.says-slider {
+  width: 100%;
+  height: 330px;
+  overflow-x: hidden;
+}
+
+.says {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 130%;
+  height: 100%;
+  margin: 0px 160px;
+  gap: 20px;
+}
+
+.says-block {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: rgba(76, 0, 112, 0.195968);
+  border-radius: 20px;
+}
+
+.says-block__text {
+  width: 80%;
+  font-size: var(--font-middle);
+  color: #FFFFFF;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "Muli", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 50px;
+}
+
+.says-block__people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 50px;
+}
+
+.block-people__text {
+  margin-left: 14px;
+}
+
+.block-people__text h6 {
+  font-weight: 700;
+  font-size: var(--font-standart);
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.block-people__text p {
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  color: #FFFFFF;
+  font-size: var(--font-standart);
+  line-height: 20px;
+}
+
+.question {
+  width: 100%;
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.question-block {
+  width: 59%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid rgba(205, 16, 255, 0.05);
+}
+
+.question-block__btn {
+  width: 100%;
+  background: none;
+  height: 104px;
+  border-radius: 21px;
+  mix-blend-mode: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question-block__btn p {
+  width: 90%;
+  text-align: start;
+  padding-left: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-middle);
+  line-height: 24px;
+  color: var(--color-text-large);
+}
+
+.question-block__text {
+  width: 100%;
+  margin: 0 auto;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.question-block__text p {
+  padding: 0px 140px 0px 40px;
+}
+
+.active {
+  padding: 10px;
+  visibility: visible;
+  height: auto;
+  overflow: none;
+  opacity: 1;
+  height: 310px;
 }
