@@ -19,6 +19,65 @@ html
     border: 0
     vertical-align: baseline
     font-family: 'Muli', sans-serif
+.preload-container
+    position: fixed
+    left: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    z-index: 999999
+    display: flex
+    align-items: center
+    justify-content: center  
+    background: #fff
+    transition: all 0.5s
+    opacity: 1
+.preloader
+    display: block
+    position: relative
+    width: 150px
+    height: 150px
+    margin: 30px auto
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #9F06FF
+    animation: preloader-spin 2s linear infinite
+    
+
+.preloader:before 
+    content: ""
+    position: absolute
+    top: 5px
+    left: 5px
+    right: 5px
+    bottom: 5px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #CD10FF
+    animation: preloader-spin 3s linear infinite
+
+.preloader:after 
+    content: ""
+    position: absolute
+    top: 15px
+    left: 15px
+    right: 15px
+    bottom: 15px
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top-color: #de85f7
+    animation: preloader-spin 1.5s linear infinite
+.preloader-remove
+    opacity: 0
+    z-index: -10
+
+@keyframes preloader-spin 
+    0%   
+        transform: rotate(0deg)
+    
+    100% 
+        transform: rotate(360deg)
+    
 
 body
     width:100%
@@ -54,7 +113,6 @@ header
     font-family: 'Muli', sans-serif
 
 .header-nav__link:hover
-    color: #9F06FF
     text-shadow: 0px 0px 10px #CD10FF 
 
 .registration
@@ -83,7 +141,6 @@ header
     cursor: pointer
 
 .login:hover
-    color: #9F06FF
     text-shadow: 0px 0px 10px #CD10FF
 
 .company
@@ -194,17 +251,50 @@ header
     margin: 0 auto
     height: 172px
     margin-top: 200px
+    z-index: 202
+    background: white
+
+.edge-oval
+    display: block
+    z-index: -5
+    position: absolute
+    left: 0
+    top: 105%
+    overflow: hidden
+
+.edge-oval__small
+    position: absolute
+    left: 8%
+    top: 125%
+    overflow: hidden
+    z-index: -4
+    display: block
+.instructor-oval
+    position: absolute
+    z-index: -1
+    top: 15%
+    right: 18%
+.skill-oval
+    position: absolute
+    right: 0
+    top: 120%
+    overflow: hidden
+    z-index: -4
+    display: block
+
 .edge-item__large
     font-size: var(--font-number)
     line-height: 50px
     text-align: center
     color: var(--color-text-large)
     font-weight: 700
+    z-index: 20
 .edge-item__small
     font-size: var(--font-standart)
     line-height: 20px
     text-align: center
     color: var(--color-text-small)
+    z-index: 20
 
 .skill-head
     width: 77%
@@ -286,6 +376,7 @@ header
     width: 77%
     margin: 0 auto
     height: 600px
+    position: relative
 
 .instructor-name
     width: 50%
@@ -398,6 +489,17 @@ header
     gap: 20px
     display: flex
     flex-direction: column
+    position: relative
+.quest-oval
+    position: absolute
+    right: 0
+    top: 62%
+    z-index: -3
+.quest-oval__small
+    position: absolute
+    right: 2%
+    top: 60%
+    z-index: -2
 .question-block
     width: 59%
     margin: 0 auto
@@ -406,6 +508,7 @@ header
     justify-content: center
     align-items: center
     border: 2px solid rgba(205, 16, 255, 0.05)
+    border-radius: 21px
 .question-block__btn
     width: 100%
     background: none
@@ -415,6 +518,10 @@ header
     display: flex
     justify-content: flex-start
     align-items: center
+    cursor: pointer
+
+.question-block__btn:hover
+    background: rgba(205, 16, 255, 0.05)
 
 .question-block__btn p 
     width: 90%
@@ -436,6 +543,11 @@ header
 
 .question-block__text p
     padding: 0px 140px 0px 40px
+    font-weight: 400
+    font-size: var(--font-standart)
+    line-height: 26px
+    color: var(--color-text-small)
+    text-align: justify
 .active
     padding:10px
     visibility: visible
@@ -443,5 +555,136 @@ header
     overflow: none
     opacity:1
     height: 310px
+
+.question-footer
+    width: 45%
+    margin: 0 auto
+    text-align: center
+
+.question-footer__head
+    width: 62%
+    margin: 0 auto
+    background: rgba(255, 174, 112, 0.2)
+    mix-blend-mode: normal
+    border-radius: 33px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 120px
+.question-footer__head p
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+    font-size: var(--font-small)
+    line-height: 15px
+    text-align: center
+    letter-spacing: 2.57143px
+    text-transform: uppercase
+    color: #9F06FF
+.question-footer h2
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+    font-size: var(--font-block)
+    line-height: 56px
+    text-align: center
+    color: var(--color-text-large)
+    margin-top: 50px
+
+.question-footer button
+    background: var(--purple-gradient)
+    border-radius: 33px
+    width: 206px
+    height: 66px
+    font-family: 'Muli', sans-serif
+    font-weight: 700
+    font-size: 20px
+    line-height: 25px
+    color: white
+    cursor: pointer
+    margin: 30px 0px 130px 0px
+
+.question-footer button:hover
+    background: var(--bronze-gradient)
+    color: var(--color-text-large)
+
+footer 
+    background: rgba(205, 16, 255, 0.05)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+.footer-subscribe
+    width: 75%
+    height: 179px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+
+.footer-subscribe__email
+    width: 80%
+    position: relative
+
+.footer-subscribe__email input
+    width: 890px
+    height: 66px
+    background: white
+    border-radius: 33px
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.0501257)
+    color: var(--color-text-small)
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    padding-left: 40px
+    margin-left: 100px
+
+.footer-subscribe__email button
+    background: var(--purple-gradient)
+    border-radius: 33px
+    width: 135px
+    height: 50px
+    font-family: 'Muli', sans-serif
+    font-weight: 700
+    font-size: 20px
+    line-height: 25px
+    color: white
+    position: absolute
+    right: 14%
+    top: 11%
+    cursor: pointer
+
+.footer-subscribe__email button:hover
+    background: var(--bronze-gradient)
+    color: var(--color-text-large)
+
+.footer-menu
+    width: 40%
+    height: 200px
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 140px
+    margin-bottom: 80px
+.footer-menu li 
+    font-weight: 400
+    font-size: var(--font-standart)
+    line-height: 20px
+    margin-top: 20px
+
+.null
+    margin-top: 40px
+.footer-menu li a 
+    color: var(--color-text-small)
+.footer-menu li a:hover
+    text-shadow: 0px 0px 10px #CD10FF
+.footer-menu__head p
+    font-weight: 700
+    font-size: var(--font-standart)
+    line-height: 20px
+    color: var(--color-text-large)
+
+
+
+
 
 

@@ -1,3 +1,4 @@
+//slider
 const sliders = document.querySelector('.says-slider');
 let down = false;
 let startX;
@@ -38,13 +39,6 @@ function my_func() {
 }
 
 //rotate
-// function rotateImage(imageId) {
-//     const image = document.getElementById(imageId);
-//     let rotation = parseInt(image.dataset.rotation) || 0;
-//     rotation += 180;
-//     image.style.transform = `rotate(${rotation}deg)`;
-//     image.dataset.rotation = rotation % 360;
-// }
 
 let btn1 = document.getElementById('btn1');
 
@@ -89,3 +83,9 @@ btn4.addEventListener('click', () => {
     image.dataset.rotation = rotation % 360;
     image.style.transition = `all 0.2s linear`;
 })
+
+//preload
+window.onload = function() {
+    document.querySelector('.preloader').classList.add("preloader-remove");
+    document.querySelector('.preload-container').classList.add("preloader-remove");
+};
