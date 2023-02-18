@@ -25,16 +25,18 @@
 </style>
 
 <body>
-    <div class="preload-container"><div class="preloader"></div></div>
-    
+    <div class="preload-container">
+        <div class="preloader"></div>
+    </div>
+
     <header class="header">
         <div class="header-logo">
             <img src="./img/Logo.png" alt="$$">
         </div>
         <div class="header-nav">
             <ul class="header-nav__list">
-                <li class="header-nav__item"><a class="header-nav__link" href="">Course topics</a></li>
-                <li class="header-nav__item"><a class="header-nav__link" href="">What students say</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#question">Course topics</a></li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#say">What students say</a></li>
             </ul>
         </div>
         <div class="header-button">
@@ -52,7 +54,7 @@
                     free and get started building a site today.</p>
             </div>
             <div class="company-block__item">
-                <button>Get started</button>
+                <button class="registr">Get started</button>
             </div>
             <div class="company-block__student">
                 <div class="block-student__image"><img class="student-image__one" src="./img/Oval.png" alt="##"></div>
@@ -148,7 +150,7 @@
         </div>
         <div class="instructor-image"><img src="./img/Pastor-2016-headshot-3.png" alt="##"></div>
     </section>
-    <section class="say">
+    <section class="say" id="say">
         <div class="say-head">
             <h5>What my students say</h5>
             <p>Create custom landing pages with Shades that convert more visitors than any website—no coding required.
@@ -213,7 +215,7 @@
             </div>
         </div>
     </section>
-    <section class="question">
+    <section class="question" id="question">
         <img src="./img/Oval(11).png" alt="$$" class="quest-oval">
         <img src="./img/Oval(12).png" alt="$$" class="quest-oval__small">
         <div class="question-container"></div>
@@ -283,16 +285,17 @@
                 <p>Get 30 Days Money Back Guarantee</p>
             </div>
             <h2>Ready to learn UX Design from the expert?</h2>
-            <button>Get started</button>
+            <button class="registrat">Get started</button>
         </div>
     </section>
     <footer class="footer">
         <div class="footer-subscribe">
             <div class="footer-subscribe__image"><img src="./img/Logo.png" alt="$$"></div>
             <div class="footer-subscribe__email">
-                <form>
+                <form id="subscribe">
                     <input type="email" placeholder="Stay in the loop  - sign up with your email" name="email">
-                    <button>Subscribe</button>
+                    <button class="subscribe">Subscribe</button>
+                    <p class="congrats">Congratulations!</p>
                 </form>
             </div>
         </div>
@@ -347,6 +350,70 @@
             </ul>
         </div>
     </footer>
+    <!--Create modal div-->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-header__image">
+                    <img src="./img/Logo.png" alt="$$">
+                    <div class="modal-close">
+                        <button class="close">&#x2716;</button>
+                    </div>
+                </div>
+                <!--close button-->
+
+                <!--create registration form login, password, confirm password, email-->
+                <form id="reg" onsubmit="return false;">
+                    <div class="modal-header__input">
+                        <input id="username" type="text" placeholder="Username" name="username">
+                    </div>
+                    <div class="modal-header__input password">
+                        <input id="password" type="password" placeholder="Password" name="password">
+                    </div>
+                    <div class="modal-header__input">
+                        <input id="confirmPassword" type="password" placeholder="Confirm Password"
+                            name="confirmPassword">
+                    </div>
+                    <div class="modal-header__input">
+                        <input id="email" type="email" placeholder="Email" name="email">
+                    </div>
+                    <div class="modal-header__login">
+                        <p>Already have an account?<a id="modal-log">Login</a></p>
+
+                    </div>
+                    <div class="modal-header__button">
+                        <button id="submit">Register</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--create modal login div-->
+    <div class="modal-login">
+        <div class="modal-login__content">
+            <div class="modal-login__image">
+                <img src="./img/Logo.png" alt="$$">
+                <div class="modal-login__close">
+                    <button class="close1">&#x2716;</button>
+                </div>
+            </div>
+            <form id="login" onsubmit="return false;">
+                <p>Please, enter your account</p>
+                <div class="modal-login__input">
+                    <input id="username" type="text" placeholder="Username" name="username">
+                </div>
+                <div class="modal-login__input password">
+                    <input id="password" type="password" placeholder="Password" name="password">
+                </div>
+                <div class="modal-login__button">
+                    <p>Don't have an account? <a id="registration">Register</a></p>
+                    <button id="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <button class="scroll"><img src="./img/up-arrow.png" alt="#"></button>
     <script src="./js/scroll-slide.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
