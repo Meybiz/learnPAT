@@ -146,7 +146,7 @@ header
     display: flex
 
 .company-block
-    width: 1090px
+    width: 60%
     height: 700px
     background: rgba(205, 16, 255, 0.05)
     mix-blend-mode: normal
@@ -223,7 +223,7 @@ header
     width: 46%
     position: absolute
     right: 0
-    top: 22%
+    margin-top: 100px
     height: 460px
     box-shadow: 0px 32px 44px #818A8C
     border-radius: 20px 0px 0px 20px
@@ -253,22 +253,26 @@ header
     margin-top: 200px
     z-index: 202
     background: white
-
-.edge-oval
-    display: block
-    z-index: -5
+.edge-absolute
     position: absolute
+    margin-bottom: 80px
     left: 0
-    top: 105%
-    overflow: hidden
+    z-index: -2
+.edge-oval
+    z-index: -2
+    position: absolute
 
 .edge-oval__small
     position: absolute
-    left: 8%
-    top: 125%
-    overflow: hidden
-    z-index: -4
-    display: block
+    z-index: -1
+    margin-left: 160px
+    margin-top: 210px
+
+.skill-absolute
+    position: absolute
+    margin-bottom: 80px
+    left: 0
+    z-index: -2
 .instructor-oval
     position: absolute
     z-index: -1
@@ -276,11 +280,10 @@ header
     right: 18%
 .skill-oval
     position: absolute
-    right: 0
-    top: 120%
-    overflow: hidden
-    z-index: -4
-    display: block
+    z-index: -1
+    margin-left: 93vw
+    
+    margin-top: 210px
 
 .edge-item__large
     font-size: var(--font-number)
@@ -719,7 +722,7 @@ footer
 .modal-header
     height: 100%
 
-    &__image img
+.modal-header__image img
         float: left
         margin-top: 10px
 
@@ -732,7 +735,7 @@ footer
     background: none
     cursor: pointer
 
-    &:hover
+.close:hover
         color: #9F06FF
 
 /*form registration stylesheet adaptive*/
@@ -775,7 +778,7 @@ footer
     width: 60%
 
 /*form modal-header__input stylesheet adaptive*/
-    & input
+.modal-header__input input
         width: 100%
         height: 66px
         background: white
@@ -787,9 +790,8 @@ footer
         font-size: 16px
         line-height: 20px
         padding-left: 40px
-  /*margin-left: 100px; */
 
-    & input:focus
+.modal-header__input input:focus
         outline: none
         box-shadow: 0px 1px 26px #ebadfc
 
@@ -799,7 +801,7 @@ footer
     align-items: center
 
 /*form modal-header__input stylesheet adaptive*/
-    & button
+.modal-header__button button
         background: var(--purple-gradient)
         border-radius: 33px
         width: 135px
@@ -812,7 +814,7 @@ footer
         cursor: pointer
         margin: 0 auto
 
-    & button:hover
+.modal-header__button button:hover
         background: var(--bronze-gradient)
         color: var(--color-text-large)
         transition: all 0.3s ease-in-out
@@ -833,7 +835,7 @@ footer
     color: #CD10FF
     padding-left: 5px
 
-    &:hover
+.modal-header__login:hover
         text-shadow: 0px 0px 10px #CD10FF
 
 /*modal login adaptive stylesheet*/
@@ -870,7 +872,7 @@ footer
 .modal-login__image
     height: 100px
 
-    & img
+.modal-login__image img
         float: left
         margin-top: 10px
 
@@ -883,14 +885,14 @@ footer
     background: none
     cursor: pointer
 
-    &:hover
+.close1:hover
         color: #9F06FF
 
 .modal-login__input
     width: 60%
 
 /*form modal-header__input stylesheet adaptive*/
-    & input
+.modal-login__input input
         width: 100%
         height: 66px
         background: white
@@ -902,9 +904,8 @@ footer
         font-size: 16px
         line-height: 20px
         padding-left: 40px
-  /*margin-left: 100px; */
 
-    & input:focus
+.modal-login__input input:focus
         outline: none
         box-shadow: 0px 1px 26px #ebadfc
 
@@ -915,7 +916,7 @@ footer
     flex-direction: column
     gap: 30px
 
-    & button
+.modal-login__button button
         background: var(--purple-gradient)
         border-radius: 33px
         width: 135px
@@ -928,7 +929,7 @@ footer
         cursor: pointer
         margin: 0 auto
 
-    & button:hover
+.modal-login__button button:hover
         background: var(--bronze-gradient)
         color: var(--color-text-large)
         transition: all 0.3s ease-in-out
@@ -961,11 +962,12 @@ footer
     color: #CD10FF
     padding-left: 5px
 
-    &:hover
+.modal-login__content:hover
         text-shadow: 0px 0px 10px #CD10FF
 
 #subscribe
-    display: flexflex-direction: row
+    display: flex
+    flex-direction: row
     justify-content: center
     align-items: center
 
@@ -991,5 +993,5 @@ footer
     align-items: center
     cursor: pointer
 
-    &:hover
+.scroll:hover
         background: var(--bronze-gradient)

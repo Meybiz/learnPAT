@@ -1,0 +1,14 @@
+/*max-width 1366px adaptive stylesheet*/
+@media (max-width: 1366px) {
+    .company-block__item h1 {
+    font-size: 46px;
+    width: 65%;
+    }
+    .say-head h5 {
+        font-size: 40px;
+    }
+    .footer-menu li {
+        font-size: 14px;
+        width: 150%;
+    }
+}
